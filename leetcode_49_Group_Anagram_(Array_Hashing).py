@@ -48,4 +48,10 @@ class Solution49:
 	
 	@staticmethod
 	def groupAnagrams2(strs: list[str]) -> list[list[str]]:
-	
+		res = dict(list)
+		for s in strs:
+			count = [0] * 26  # a ... z
+			for c in s:
+				count[ord(c) - ord('a')] += 1
+			res[tuple(count)].append(s)
+		return res.values()
