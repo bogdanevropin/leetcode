@@ -46,4 +46,6 @@ class Solution49:
 			all_s_strs.append(str_dict[s_k])
 		return all_s_strs
 	
+	@staticmethod
+	def groupAnagrams2(strs: list[str]) -> list[list[str]]:
 	
